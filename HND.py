@@ -108,6 +108,7 @@ if __name__ == "__main__":
 	data['features'] = swell_features
 	data['tags'] = swell_labels
 	out = Optimization(data, hierarchy)
+	# out = Optimization(data, hierarchy, fraction_novel=0.1) #Uncomment if you wanna see the effect of 10% slacks
 	# Draw DAG
 	nx.draw_networkx(g, with_labels=True)
 	# Plot problem
