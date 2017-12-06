@@ -20,7 +20,7 @@ def generate_data(sz):
 	return features, tags
 
 def get_root(g):
-	return nx.topological_sort(g)[0]
+	return list(nx.topological_sort(g))[0]
 
 def Optimization(data, hierarchy, fraction_novel=None, root=None):
 	# If root is none in the DAG you can spare some time.
